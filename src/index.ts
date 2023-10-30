@@ -1,5 +1,4 @@
 import ProxyToGate from '@steads/proxy-to-gate';
-import camelcase from 'camelcase';
 
 export default abstract class Manager<T, D extends T = T> extends ProxyToGate {
   /**
@@ -46,7 +45,18 @@ export default abstract class Manager<T, D extends T = T> extends ProxyToGate {
    * Guess driver callback.
    */
   protected driverCallback(driver: string): string {
-    return `create${camelcase(driver, { pascalCase: true })}Driver`;
+    return `create${this.toPascalCase(driver)}Driver`;
+  }
+
+  /**
+   * Get pascal case of a string.
+   */
+  protected toPascalCase(string: string): string {
+    return string
+      .replace(/(?:^\w|[A-Z]|\b\w)/g, (letter, index) => {
+        return index === 0 ? letter.toUpperCase() : letter.toUpperCase();
+      })
+      .replace(/[\s_-]+/g, '');
   }
 
   /**
