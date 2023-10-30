@@ -1,7 +1,7 @@
 {
   "name": "@steads/manager",
-  "type": "module",
-  "version": "1.0.0",
+  "type": "commonjs",
+  "version": "1.0.2",
   "description": "Builder design pattern for Nodejs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -27,7 +27,10 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@steads/proxy-to-gate": "^1.0.1",
-    "camelcase": "^8.0.0"
+    "@steads/manager": "^1.0.1",
+    "@steads/proxy-to-gate": "^1.0.2",
+    "camelcase": "^8.0.0",
+    "i": "^0.3.7",
+    "npm": "^10.2.1"
   }
 }
