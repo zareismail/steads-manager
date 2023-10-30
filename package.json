@@ -1,0 +1,33 @@
+{
+  "name": "@steads/manager",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Builder design pattern for Nodejs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/zareismail/steads-manager/issues",
+    "email": "zarehesmaiel@gmail.com"
+  },
+  "keywords": [
+    "manager",
+    "builder",
+    "manager"
+  ],
+  "author": "Ismail Zare <zarehesmaiel@gmail.com> (https://github.com/zareismail)",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@steads/proxy-to-gate": "^1.0.1",
+    "camelcase": "^8.0.0"
+  }
+}
